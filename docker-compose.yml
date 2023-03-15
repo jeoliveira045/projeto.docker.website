@@ -1,0 +1,11 @@
+services:
+  web:
+    image: httpd
+    ports:
+      - "80:80"
+    volumes:
+      - /data/php_projeto_website:/usr/local/apache2/htdocs
+    networks:
+      - rede_personalizada
+networks:
+  rede_personalizada:
